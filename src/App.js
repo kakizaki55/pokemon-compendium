@@ -8,16 +8,21 @@ import Selector from './components/Selector/Selector';
 function App() {
   const [pokemon, setPokemon] = useState([]);
   const [query, setQuery] = useState('');
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const fetchData = async (query) => {
       const data = await fetchPokemon(query);
       setPokemon(data.results);
+      setIsLoading(false);
     };
 
     fetchData(query);
   }, [query]);
 
+  if (isLoading) {
+    return <div>Loading...</div>;
+  }
   return (
     <div className="App">
       <Header />
