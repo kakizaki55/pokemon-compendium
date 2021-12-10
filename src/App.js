@@ -28,7 +28,6 @@ function App() {
     const fetchData = async () => {
       const data = await fetchTypes();
       setTypes(data);
-      await console.log(types);
     };
     fetchData();
   }, []);
