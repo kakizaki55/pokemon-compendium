@@ -30,11 +30,12 @@ export default function PokemonCard({
           <h6>{attack}</h6>
         </div>
         <hr />
-        <div id="move-2">
-          <h6>{ability_2}</h6>
-          <h6>{special_attack}</h6>
-        </div>
-
+        {ability_2 !== 'NA' && (
+          <div id="move-2">
+            <h6>{ability_2}</h6>
+            <h6>{special_attack}</h6>
+          </div>
+        )}
         <hr />
       </div>
     </div>
