@@ -1,14 +1,109 @@
-.pokeman-card img {
+.pokemon-card img {
   width: 200px;
   height: 150px;
-  border: 3px solid black;
+  border: 3px solid rgb(255, 224, 49);
   margin: 10px;
   margin-top: 0;
+  box-shadow: 3px 3px 10px black;
 }
-.pokeman-card {
-  border: blue solid 8px;
-  width: 300px;
+.pokemon-card {
+  border: rgb(242, 209, 23) solid 8px;
+  width: 235px;
   border-radius: 5px;
   margin: 10px;
   height: 350px;
+  transition: all 0.5s ease-in-out;
+}
+.pokemon-card:hover {
+  transform: scale(1.1);
+  box-shadow: 10px 10px 10px dimgray;
+}
+.line-1 {
+  height: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.line-1 img {
+  width: 15px;
+  height: 15px;
+  border: none;
+  box-shadow: none;
+}
+#hp {
+  color: rgb(220, 78, 27);
+  font-weight: bold;
+}
+hr {
+  margin: 5px;
+}
+#move-1,
+#move-2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 20px;
+  height: 50px;
+}
+#info-panel {
+  font-size: 8px;
+  font-style: italic;
+  background-color: gold;
+  width: 200px;
+  margin: auto;
+}
+.normal {
+  background-color: grey;
+}
+.fire {
+  background-color: rgb(218, 61, 61);
+}
+.water {
+  background-color: rgb(62, 157, 174);
+}
+.rock {
+  background-color: rgb(179, 89, 56);
+}
+.ground {
+  background-color: darkgoldenrod;
+}
+.grass {
+  background-color: green;
+}
+.fighting {
+  background-color: rgb(121, 11, 11);
+}
+.electric {
+  background-color: yellow;
+}
+.ice {
+  background-color: rgb(124, 205, 223);
+}
+.poison {
+  background-color: purple;
+}
+.psychic {
+  background-color: rebeccapurple;
+}
+.bug {
+  background-color: rgb(16, 79, 16);
+}
+.ghost {
+  background-color: darkorchid;
+}
+.dark {
+  background-color: rgb(72, 70, 77);
+}
+.steel {
+  background-color: silver;
+}
+.fairy {
+  background-color: pink;
+}
+.dragon {
+  background-color: cornflowerblue;
 }

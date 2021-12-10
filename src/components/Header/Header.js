@@ -1,5 +1,5 @@
 import React from 'react';
 
 export default function Header() {
-  return <div>Pokemon Header</div>;
+  return <header>Pokemon Header</header>;
 }
