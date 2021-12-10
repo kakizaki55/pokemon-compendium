@@ -38,6 +38,7 @@ function App() {
         isLoading={isLoading}
         setIsLoading={setIsLoading}
       />
+
       <div className="poke-list">
         {pokemon.map((poke) => {
           return <PokemonCard key={poke._id} {...poke} />;

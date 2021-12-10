@@ -23,7 +23,7 @@ export default function PokemonCard({
         </div>
       </div>
       <img src={`${url_image}`}></img>
-      <div id="info-panel">{`${type_1} Pokemon. Length: ${height}, Weight:${weight} lbs.`}</div>
+      <div id="info-panel">{`${type_1} Pokemon. Length: ${height}', Weight:${weight} lbs.`}</div>
       <div className="moves">
         <div id="move-1">
           <h6>{ability_1}</h6>
@@ -38,7 +38,10 @@ export default function PokemonCard({
             </div>
           </>
         )}
+      </div>
+      <div>
         <hr />
+        alsdkfhjalsdf
       </div>
     </div>
   );
