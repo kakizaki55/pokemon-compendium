@@ -18,7 +18,6 @@ function App() {
       const data = await fetchPokemon(query, type, order);
       setPokemon(data.results);
       setIsLoading(false);
-      console.log(data);
     };
 
     fetchData();

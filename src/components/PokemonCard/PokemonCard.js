@@ -5,7 +5,6 @@ export default function PokemonCard({
   pokemon,
   url_image,
   type_1,
-  type_2,
   hp,
   height,
   weight,
