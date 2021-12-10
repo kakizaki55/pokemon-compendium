@@ -21,7 +21,7 @@ function App() {
     };
 
     fetchData();
-  }, [isLoading, type, order]);
+  }, [isLoading, type, order, query]);
   if (isLoading) {
     return <div>Loading...</div>;
   }
