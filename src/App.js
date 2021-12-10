@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import fetchPokemon from './services/pokemon';
 import PokemonCard from './components/PokemonCard/PokemonCard';
 import Header from './components/Header/Header';
-// import Footer from './components/Footer/Footer';
+import Footer from './components/Footer/Footer';
 import Selector from './components/Selector/Selector';
 
 function App() {
@@ -21,7 +21,7 @@ function App() {
     };
 
     fetchData();
-  }, [isLoading, type, order, query]);
+  }, [isLoading, type, order]);
   if (isLoading) {
     return <div>Loading...</div>;
   }
@@ -43,6 +43,7 @@ function App() {
           return <PokemonCard key={poke._id} {...poke} />;
         })}
       </div>
+      <Footer />
     </div>
   );
 }

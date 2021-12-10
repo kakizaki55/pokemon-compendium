@@ -1,4 +1,25 @@
 .selector-container {
   display: flex;
+  justify-content: center;
+  align-content: center;
+  border: black solid 5px;
+  background-color: red;
+  padding: 20px;
+  width: 450px;
+}
+.container-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+#pokedex-text {
+  display: inline-block;
+  padding-right: 30px;
+}
+.search-bar {
+  display: flex;
   flex-direction: row;
+}
+Select {
+  margin: 10px;
 }
