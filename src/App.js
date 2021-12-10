@@ -1,6 +1,6 @@
 import './App.css';
 import { useState, useEffect } from 'react';
-import fetchPokemon from './services/pokemon';
+import { fetchPokemon, fetchTypes } from './services/pokemon';
 import PokemonCard from './components/PokemonCard/PokemonCard';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
@@ -12,6 +12,7 @@ function App() {
   const [isLoading, setIsLoading] = useState(true);
   const [type, setType] = useState('all');
   const [order, setOrder] = useState('asc');
+  const [types, setTypes] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -22,6 +23,16 @@ function App() {
 
     fetchData();
   }, [isLoading, type, order]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const data = await fetchTypes();
+      setTypes(data);
+      await console.log(types);
+    };
+    fetchData();
+  }, []);
+
   if (isLoading) {
     return <div>Loading...</div>;
   }
@@ -37,6 +48,7 @@ function App() {
         setOrder={setOrder}
         isLoading={isLoading}
         setIsLoading={setIsLoading}
+        types={types}
       />
 
       <div className="poke-list">

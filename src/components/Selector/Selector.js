@@ -15,6 +15,7 @@ export default function Selector({
   setOrder,
   isLoading,
   setIsLoading,
+  types,
 }) {
   return (
     <div className="container-container">
@@ -54,24 +55,11 @@ export default function Selector({
               }}
             >
               <MenuItem value="all">All</MenuItem>
-              <MenuItem value="normal">normal</MenuItem>
-              <MenuItem value="fire">fire</MenuItem>
-              <MenuItem value="water">water</MenuItem>
-              <MenuItem value="grass">grass</MenuItem>
-              <MenuItem value="flying">flying</MenuItem>
-              <MenuItem value="fighting">fighting</MenuItem>
-              <MenuItem value="electric">electric</MenuItem>
-              <MenuItem value="ice">ice</MenuItem>
-              <MenuItem value="poison">poison</MenuItem>
-              <MenuItem value="ground">ground</MenuItem>
-              <MenuItem value="psychic">psychic</MenuItem>
-              <MenuItem value="bug">bug</MenuItem>
-              <MenuItem value="rock">rock</MenuItem>
-              <MenuItem value="ghost">ghost</MenuItem>
-              <MenuItem value="dark">dark</MenuItem>
-              <MenuItem value="dragon">dragon</MenuItem>
-              <MenuItem value="steel">steel</MenuItem>
-              <MenuItem value="fairy">fairy</MenuItem>
+              {types.map((ty) => (
+                <MenuItem key={ty.type} value={ty.type}>
+                  {ty.type}
+                </MenuItem>
+              ))}
             </Select>
           </FormControl>
           <FormControl>

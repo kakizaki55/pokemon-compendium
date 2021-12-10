@@ -2,7 +2,18 @@ import { render, screen } from '@testing-library/react';
 import Selector from './Selector';
 
 test('', () => {
-  render(<Selector />);
-  const linkElement = screen.getByText(/Pokemon Header/i);
-  expect(linkElement).toMatchSnapshot();
+  const container = render(
+    <Selector
+      query="ab"
+      setQuery="setQuery"
+      type="fire"
+      setType="setType"
+      order="asc"
+      setOrder="setOrder"
+      isLoading={true}
+      setIsLoading="setIslaoding"
+    />
+  );
+
+  expect(container).toMatchSnapshot();
 });
