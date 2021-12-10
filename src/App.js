@@ -22,7 +22,7 @@ function App() {
     };
 
     fetchData();
-  }, [isLoading, type, order]);
+  }, [isLoading, type, order, query]);
 
   useEffect(() => {
     const fetchData = async () => {
