@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import fetchPokemon from './services/pokemon';
 import PokemonCard from './components/PokemonCard/PokemonCard';
 import Header from './components/Header/Header';
-import Footer from './components/Footer/Footer';
+// import Footer from './components/Footer/Footer';
 import Selector from './components/Selector/Selector';
 
 function App() {
