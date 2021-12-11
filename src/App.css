@@ -4,3 +4,6 @@
   padding: 100px;
   overflow-x: auto;
 }
+.App {
+  background-image: url('./background.jpeg');
+}
