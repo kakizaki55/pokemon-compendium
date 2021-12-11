@@ -72,9 +72,10 @@ hr {
   display: flex;
   flex-direction: row;
   font-size: 5px;
-  justify-content: space-between;
-  margin-top: 3px;
+  justify-content: space-around;
+  width: 220px;
 }
+
 .normal {
   background-color: rgb(215, 213, 213);
 }
